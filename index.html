@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- DF Studios Website | Version: 4.8 | Released: 2026-03-15 | Author: DF Studios -->
+<!-- DF Studios Website | Version: 4.9 | Released: 2026-03-15 | Author: DF Studios -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="version" content="4.8" />
+  <meta name="version" content="4.9" />
   <meta name="release-date" content="2026-03-15" />
   <meta name="author" content="DF Studios" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -118,8 +118,8 @@
 
     /* HERO */
     #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background-image: url('images/hero.jpg'); background-size: cover; background-position: center; animation: heroZoom 8s ease forwards; }
-    @keyframes heroZoom { from { transform: scale(1.06); filter: brightness(0.4); } to { transform: scale(1.0); filter: brightness(0.55); } }
+    .hero-bg { position: absolute; inset: 0; background-image: url('images/hero.jpg'); background-size: cover; background-position: center 40%; animation: heroZoom 8s ease forwards; }
+    @keyframes heroZoom { from { transform: scale(1.03); filter: brightness(0.5); } to { transform: scale(1.0); filter: brightness(0.65); } }
     .hero-grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(240,90,26,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(240,90,26,0.035) 1px, transparent 1px); background-size: 70px 70px; pointer-events: none; z-index: 1; }
     .hero-gradient { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11,22,40,0.05) 0%, rgba(11,22,40,0.0) 25%, rgba(11,22,40,0.6) 65%, rgba(11,22,40,1) 100%); z-index: 1; }
     .hero-glow { position: absolute; top: -80px; right: -80px; width: 700px; height: 700px; background: radial-gradient(circle, rgba(240,90,26,0.15) 0%, transparent 60%); pointer-events: none; z-index: 1; }
