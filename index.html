@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- DF Studios Website | Version: 4.1 | Released: 2026-03-15 | Author: DF Studios -->
+<!-- DF Studios Website | Version: 4.2 | Released: 2026-03-15 | Author: DF Studios -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="version" content="4.1" />
+  <meta name="version" content="4.2" />
   <meta name="release-date" content="2026-03-15" />
   <meta name="author" content="DF Studios" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -237,6 +237,38 @@
       .form-row { grid-template-columns: 1fr; }
       .hstat { flex: 0 0 50%; }
     }
+
+    /* REVIEWS */
+    #reviews-wrap { padding: 7rem 3.5rem; background: var(--navy); border-top: 1px solid var(--border); }
+    .reviews-inner { max-width: 1200px; margin: 0 auto; }
+    .reviews-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3.5rem; }
+    .reviews-summary { display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem; }
+    .reviews-score { font-family: var(--font-display); font-size: 4rem; color: var(--orange); line-height: 1; }
+    .reviews-stars { display: flex; flex-direction: column; gap: 0.3rem; }
+    .stars { color: var(--orange); font-size: 1.1rem; letter-spacing: 2px; }
+    .reviews-count { font-family: var(--font-cond); font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .review-card { background: var(--navy2); border: 1px solid var(--border); padding: 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
+    .review-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+    .review-card-stars { color: var(--orange); font-size: 0.95rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .review-text { font-family: var(--font-cond); font-style: italic; font-size: 1.1rem; font-weight: 300; color: var(--white); line-height: 1.6; margin-bottom: 1.2rem; }
+    .review-meta { display: flex; flex-direction: column; gap: 0.2rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+    .review-product { font-family: var(--font-cond); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); }
+    .review-date { font-family: var(--font-cond); font-size: 10px; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.2rem; }
+    .verified-icon { position: absolute; top: 1.2rem; right: 1.2rem; font-family: var(--font-cond); font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); display: flex; align-items: center; gap: 0.3rem; }
+    .trust-bar { background: var(--navy2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.4rem 3.5rem; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 0.7rem; font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); }
+    .trust-icon { font-size: 1.1rem; }
+    .bobshop-badge-row { display: flex; align-items: center; gap: 1.5rem; margin-top: 2rem; padding: 1.2rem 1.5rem; background: var(--navy2); border: 1px solid var(--border2); width: fit-content; }
+    .bobshop-badge-row span { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--silver); }
+    .bobshop-badge-row a img { width: 60px; opacity: 0.9; transition: opacity 0.2s, transform 0.2s; }
+    .bobshop-badge-row a:hover img { opacity: 1; transform: scale(1.06); }
+    @media (max-width: 1000px) {
+      #reviews-wrap { padding: 4rem 1.5rem; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-header { flex-direction: column; align-items: flex-start; }
+      .trust-bar { padding: 1.2rem 1.5rem; gap: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -292,6 +324,16 @@
     <span>Speed Champions</span><span class="sep">◆</span><span>F1 Mini Collectibles</span><span class="sep">◆</span><span>Technic Models</span><span class="sep">◆</span><span>Driver Edition Frames</span><span class="sep">◆</span><span>Full Grid Displays</span><span class="sep">◆</span><span>124cm Landscape Frame</span><span class="sep">◆</span><span>Custom Backdrops</span><span class="sep">◆</span><span>Dust-Free Protection</span><span class="sep">◆</span><span>South African Crafted</span><span class="sep">◆</span>
     <span>Speed Champions</span><span class="sep">◆</span><span>F1 Mini Collectibles</span><span class="sep">◆</span><span>Technic Models</span><span class="sep">◆</span><span>Driver Edition Frames</span><span class="sep">◆</span><span>Full Grid Displays</span><span class="sep">◆</span><span>124cm Landscape Frame</span><span class="sep">◆</span><span>Custom Backdrops</span><span class="sep">◆</span><span>Dust-Free Protection</span><span class="sep">◆</span><span>South African Crafted</span><span class="sep">◆</span>
   </div>
+</div>
+
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">⭐</span> 5-Star Rated Seller</div>
+  <div class="trust-item"><span class="trust-icon">✅</span> Bobshop Verified Seller</div>
+  <div class="trust-item"><span class="trust-icon">🚚</span> Fast Dispatch</div>
+  <div class="trust-item"><span class="trust-icon">🛡️</span> Premium Quality Guaranteed</div>
+  <div class="trust-item"><span class="trust-icon">🇿🇦</span> South African Crafted</div>
 </div>
 
 <div id="about-wrap">
@@ -432,6 +474,132 @@
   </div>
 </div>
 
+
+<hr class="divider" />
+
+<!-- REVIEWS -->
+<div id="reviews-wrap">
+  <div class="reviews-inner">
+    <div class="reviews-header reveal">
+      <div>
+        <p class="section-label">Customer Reviews</p>
+        <h2 class="section-title">What Our<br>Customers Say</h2>
+        <div class="reviews-summary">
+          <div class="reviews-score">5.0</div>
+          <div class="reviews-stars">
+            <div class="stars">★★★★★</div>
+            <div class="reviews-count">13 Verified Reviews · Bobshop</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bobshop-badge-row">
+          <span>As seen on</span>
+          <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" rel="nofollow" target="_blank">
+            <img src="https://www.bobshop.co.za/images/site/seller/bob_seller.png" alt="I sell on bobshop.co.za">
+          </a>
+          <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" rel="nofollow" target="_blank">
+            <img src="https://www.bobshop.co.za/images/site/seller/bob_verified_seller.png" alt="I am a verified seller on bobshop.co.za">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card reveal rd1">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Great quality. Awesome seller and speedy delivery."</p>
+        <div class="review-meta">
+          <span class="review-product">F1 Speed Champions Red &amp; White Horizontal Display Frame</span>
+          <span class="review-date">14 March 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd2">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Great quality. Awesome seller and speedy delivery."</p>
+        <div class="review-meta">
+          <span class="review-product">F1 Lego APX GP (F1 Movie) Display Frame</span>
+          <span class="review-date">14 March 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd3">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Awesome seller, great product and speedy delivery."</p>
+        <div class="review-meta">
+          <span class="review-product">Red Bull F1 Display Frame</span>
+          <span class="review-date">13 March 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd1">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Superfast service thank you!"</p>
+        <div class="review-meta">
+          <span class="review-product">Red Bull (Max Verstappen) Display — Limited Edition F1</span>
+          <span class="review-date">13 March 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd2">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Top Class Seller *****"</p>
+        <div class="review-meta">
+          <span class="review-product">Red and White F1 Mini Collectable Display Frame</span>
+          <span class="review-date">12 February 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd3">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Awesome service, awesome product! Would buy again from seller."</p>
+        <div class="review-meta">
+          <span class="review-product">Team Branded F1 Mini Collectable Display Frame</span>
+          <span class="review-date">4 February 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd1">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Awesome service, received the package earlier than expected. The product looks amazing. Would buy again from seller."</p>
+        <div class="review-meta">
+          <span class="review-product">Gold &amp; Black Vertical Display Frame — Limited Edition F1</span>
+          <span class="review-date">13 January 2026</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd2">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Very cool and great service."</p>
+        <div class="review-meta">
+          <span class="review-product">Red &amp; White Horizontal Display Frame — Limited Edition F1</span>
+          <span class="review-date">30 December 2025</span>
+        </div>
+      </div>
+
+      <div class="review-card reveal rd3">
+        <div class="verified-icon">✔ Verified</div>
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-text">"Good quality. Very fast dispatch."</p>
+        <div class="review-meta">
+          <span class="review-product">Red F1 Mini Collectable Display Frame — Limited Edition</span>
+          <span class="review-date">24 December 2025</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <div id="contact-wrap">
   <div id="contact">
     <div>
@@ -459,7 +627,13 @@
 
 <footer>
   <div class="footer-logo">DF<span>.</span>Studios</div>
-  <div class="footer-mid">© 2025 DF Studios — Sheffield Beach, KZN, South Africa<br>Premium LEGO F1 Display Frames, Crafted with Pride</div>
+  <div class="footer-mid">
+    © 2025 DF Studios — Sheffield Beach, KZN, South Africa<br>Premium LEGO F1 Display Frames, Crafted with Pride<br>
+    <div style="display:flex;align-items:center;justify-content:center;gap:0.8rem;margin-top:0.8rem;">
+      <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" rel="nofollow" target="_blank"><img style="width:44px;opacity:0.8;" src="https://www.bobshop.co.za/images/site/seller/bob_seller.png" alt="I sell on bobshop.co.za"></a>
+      <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" rel="nofollow" target="_blank"><img style="width:44px;opacity:0.8;" src="https://www.bobshop.co.za/images/site/seller/bob_verified_seller.png" alt="Verified seller on bobshop.co.za"></a>
+    </div>
+  </div>
   <div class="footer-social">
     <a href="https://www.tiktok.com/@df.studios1" target="_blank" class="social-link">TikTok</a>
     <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="social-link">Bobshop</a>
