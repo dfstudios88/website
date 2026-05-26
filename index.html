@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- DF Studios Website | Version: 5.2 | Released: 2026-03-15 | Author: DF Studios -->
+<!-- DF Studios Website | Version: 5.3 | Released: 2026-05-26 | Author: DF Studios -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="version" content="5.2" />
+  <meta name="version" content="5.3" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
@@ -352,6 +352,70 @@
 
     .amazon-btn { display: inline-flex; align-items: center; gap: 0.3rem; }
     .amazon-btn:hover { border-color: #FF9900 !important; color: #FF9900 !important; }
+
+    /* ---- Products v5.3 — Dual Range ---- */
+    :root { --gold: #c49a3c; }
+    .range-nav { position: sticky; top: 0; z-index: 190; background: rgba(11,22,40,0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .range-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 3.5rem; display: flex; align-items: center; gap: 2rem; height: 50px; }
+    .range-nav-link { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; border-bottom: 2px solid transparent; padding: 0.2rem 0; transition: color 0.2s, border-color 0.2s; }
+    .range-nav-link:hover { color: var(--white); }
+    .range-nav-link.rn-active[data-range="premium"] { color: var(--white); border-bottom-color: var(--gold); }
+    .range-nav-link.rn-active[data-range="classic"]  { color: var(--white); border-bottom-color: var(--silver); }
+    .range-nav-sep { width: 1px; height: 18px; background: var(--border); }
+    .range-pip { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+    .pip-premium { background: var(--gold); }
+    .pip-classic  { background: var(--silver); }
+    .products-wrap-new { padding: 7rem 3.5rem; }
+    .range-classic-bg { background: var(--navy2); border-top: 1px solid var(--border); }
+    .products-inner-new { max-width: 1200px; margin: 0 auto; }
+    .range-label-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .range-desc { font-size: 0.95rem; color: var(--silver); line-height: 1.75; max-width: 520px; margin-top: 1rem; margin-bottom: 1.5rem; }
+    .range-pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .range-pills li { font-family: var(--font-cond); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.3rem 0.85rem; }
+    .pills-premium li { color: var(--gold); border: 1px solid rgba(196,154,60,0.35); background: rgba(196,154,60,0.07); }
+    .pills-classic  li { color: var(--silver); border: 1px solid rgba(122,154,191,0.3); background: rgba(122,154,191,0.06); }
+    .range-filter-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .rfbtn { font-family: var(--font-cond); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+    .rfbtn:hover { border-color: var(--border2); color: var(--white); }
+    .rfbtn-premium.active { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .rfbtn-classic.active  { background: var(--silver); border-color: var(--silver); color: var(--navy); }
+    .range-count { font-family: var(--font-cond); font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; }
+    .range-count strong { color: var(--white); }
+    .products-grid-new { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .products-grid-new .product-card { background: var(--navy2); border: 1px solid var(--border); overflow: hidden; position: relative; transition: border-color 0.3s, transform 0.3s; }
+    .products-grid-new .product-card:hover { transform: translateY(-5px); border-color: var(--border2); }
+    .products-grid-new .product-img { aspect-ratio: 4/3; overflow: hidden; background: var(--navy3); position: relative; }
+    .products-grid-new .product-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s, filter 0.4s; filter: brightness(0.9); }
+    .products-grid-new .product-card:hover .product-img img { transform: scale(1.04); filter: brightness(1); }
+    .products-grid-new .product-info { padding: 1.6rem; border-top: 1px solid var(--border); }
+    .range-tag { position: absolute; top: 1rem; right: 1rem; font-family: var(--font-cond); font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.28rem 0.7rem; clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%); }
+    .tag-premium { background: rgba(196,154,60,0.18); color: var(--gold); border: 1px solid rgba(196,154,60,0.45); }
+    .tag-classic  { background: rgba(122,154,191,0.15); color: var(--silver); border: 1px solid rgba(122,154,191,0.35); }
+    .product-cat { font-family: var(--font-cond); font-size: 9px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.25rem; }
+    .product-price { font-family: var(--font-cond); font-size: 12px; color: var(--muted); }
+    .product-price strong { font-size: 1rem; color: var(--white); font-weight: 700; }
+    .btn-sm-premium { color: var(--white); background: var(--navy4); border: 1px solid var(--gold) !important; }
+    .btn-sm-premium:hover { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--navy) !important; }
+    .btn-sm-classic  { color: var(--white); background: var(--navy4); border: 1px solid var(--border2) !important; }
+    .btn-sm-classic:hover  { background: var(--silver) !important; border-color: var(--silver) !important; color: var(--navy) !important; }
+    .range-shop-cta { text-align: center; margin-top: 3.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
+    .range-cta-label { font-family: var(--font-cond); font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); }
+    .range-divider-block { background: var(--navy); padding: 0 3.5rem; }
+    .range-divider-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; padding: 2rem 0 0; }
+    .range-divider-line { flex: 1; height: 1px; background: var(--border); }
+    .range-divider-label { font-family: var(--font-cond); font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .pf-hidden { display: none !important; }
+    @media (max-width: 1000px) {
+      .products-wrap-new { padding: 4rem 1.5rem; }
+      .products-grid-new { grid-template-columns: 1fr 1fr; }
+      .range-nav-inner { padding: 0 1.5rem; gap: 1.25rem; }
+      .range-divider-block { padding: 0 1.5rem; }
+    }
+    @media (max-width: 580px) {
+      .products-grid-new { grid-template-columns: 1fr; }
+      .range-filter-row { gap: 0.3rem; }
+      .rfbtn { font-size: 10px; padding: 0.35rem 0.8rem; }
+    }
   </style>
 </head>
 <body>
@@ -361,7 +425,7 @@
   <ul class="nav-links">
     <li><a href="#about-wrap">About</a></li>
     <li><a href="#gallery-wrap">Gallery</a></li>
-    <li><a href="#products-wrap">Products</a></li>
+    <li><a href="#range-premium">Products</a></li>
     <li><a href="#contact-wrap">Contact</a></li>
     <li><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="nav-cta">Shop Now</a></li>
   </ul>
@@ -466,63 +530,140 @@
 
 <hr class="divider" />
 
-<div id="products-wrap">
-  <div class="products-header reveal">
-    <div>
-      <p class="section-label">The Collection</p>
-      <h2 class="section-title">Our Frames</h2>
-    </div>
-    <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-outline" style="border-color:var(--border2);color:var(--silver);">Browse All on Bobshop →</a>
+<!-- RANGE NAV -->
+<nav class="range-nav" aria-label="Jump to product range">
+  <div class="range-nav-inner">
+    <a href="#range-premium" class="range-nav-link rn-active" data-range="premium"><span class="range-pip pip-premium"></span>Premium Range</a>
+    <div class="range-nav-sep"></div>
+    <a href="#range-classic" class="range-nav-link" data-range="classic"><span class="range-pip pip-classic"></span>Classic Range</a>
   </div>
-  <div class="products-grid">
-    <div class="product-card wide reveal">
-      <div class="product-img"><img src="images/hero.jpg" alt="LEGO F1 Speed Champions Full Grid Display Frame 124cm South Africa" loading="lazy" /><div class="product-badge hot">★ Best Seller</div></div>
-      <div class="product-info">
-        <div class="product-name">Speed Champions Full Grid</div>
-        <div class="product-dims">124cm × 50cm</div>
-        <div class="product-desc">Our most popular frame — all 10 F1 Speed Champions cars displayed side-by-side in a dramatic landscape format with custom circuit map backdrop. The ultimate statement piece for any F1 collector.</div>
-        <div class="product-foot"><span class="product-series">Speed Champions Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
-      </div>
+</nav>
+
+<!-- PREMIUM RANGE -->
+<div id="range-premium" class="products-wrap-new">
+  <div class="products-inner-new">
+    <div class="range-header reveal">
+      <div class="range-label-row"><span class="range-pip pip-premium"></span><p class="section-label" style="margin:0">Premium Range</p></div>
+      <h2 class="section-title" style="margin-top:0.5rem">Bold. Thick.<br>Commanding.</h2>
+      <p class="range-desc">A thick synthetic moulding with a sculptural wall presence. Built for collectors who want their frame to make as much of a statement as the build inside it.</p>
+      <ul class="range-pills pills-premium">
+        <li>Thick synthetic moulding</li><li>High-impact wall presence</li><li>Precision mounting hardware</li><li>Premium finish options</li>
+      </ul>
     </div>
-    <div class="product-card reveal rd1">
-      <div class="product-img"><img src="images/prod-grid-red.jpg" alt="LEGO F1 Mini Collectibles Full Grid Wall Display Frame South Africa" loading="lazy" /><div class="product-badge">Popular</div></div>
-      <div class="product-info">
-        <div class="product-name">Full Grid — Mini Collectibles</div>
-        <div class="product-desc">All 10 F1 team cars in one wall-mounted frame with vivid team-branded backdrops. The "Lights Out" edition.</div>
-        <div class="product-foot"><span class="product-series">Mini Collectibles Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
-      </div>
+    <div class="range-filter-row reveal rd1" data-grid="gridPremium" data-count="countPremium">
+      <button class="rfbtn rfbtn-premium active" data-filter="all">All</button>
+      <button class="rfbtn rfbtn-premium" data-filter="speed-champions">Speed Champions</button>
+      <button class="rfbtn rfbtn-premium" data-filter="technic">Technic</button>
+      <button class="rfbtn rfbtn-premium" data-filter="driver-edition">Driver Edition</button>
+      <button class="rfbtn rfbtn-premium" data-filter="mini-collectible">Mini Collectible</button>
     </div>
-    <div class="product-card reveal rd2">
-      <div class="product-img"><img src="images/prod-team-grid.jpg" alt="LEGO F1 Team Branded Mini Collectible Display Frame" loading="lazy" /><div class="product-badge">Popular</div></div>
-      <div class="product-info">
-        <div class="product-name">Team Grid Display</div>
-        <div class="product-desc">Individual team-branded mini collectible frames with custom printed team-colour backgrounds.</div>
-        <div class="product-foot"><span class="product-series">Mini Collectibles Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
+    <p class="range-count reveal rd2" id="countPremium">Showing <strong>6</strong> of <strong>6</strong> frames</p>
+    <div class="products-grid-new" id="gridPremium">
+
+      <div class="product-card reveal rd1" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-grid-frame-speedchampions/premium.jpg" alt="Full F1 Grid Frame Premium — 124×50cm thick synthetic moulding LEGO Speed Champions wall display South Africa" loading="lazy" /><div class="product-badge hot">★ Best Seller</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">Full F1 Grid Frame</div><div class="product-dims">124 × 50 cm · 10+ cars</div><div class="product-desc">Our flagship frame — holds an entire Speed Champions F1 grid in a single wall-mounted display. The ultimate show piece for any collector room.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
+    
+      <div class="product-card reveal rd3" data-category="technic">
+        <div class="product-img"><img src="images/products/f1-lego-technic/premium.png" alt="Technic Model Frame Premium — custom-sized thick synthetic moulding LEGO Technic wall display South Africa" loading="lazy" /><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">Technic Model Frame</div><div class="product-dims">Custom sized · Most Technic builds</div><div class="product-desc">Purpose-built for large Technic models. Deep-set mounting with reinforced supports — handles the weight and depth of complex builds.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>   
+
+      <div class="product-card reveal rd3" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-medium-speedchampions/premium.jpg" alt="Heritage Display Frame Premium — 90×35cm limited thick synthetic moulding LEGO Speed Champions display South Africa" loading="lazy" /><div class="product-badge" style="background:#7c3916;color:#fb923c;">Limited</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">Heritage Display Frame</div><div class="product-dims">90 × 35 cm · 3–6 cars</div><div class="product-desc">A curated frame for classic-era Speed Champions sets. Matte black finish with aged bronze details — built for vintage builds.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>   
+
+      <div class="product-card reveal rd2" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-team-brands-minilego/premium.png" alt="Team Grid Frame Premium — 80×30cm thick synthetic moulding LEGO Speed Champions team display South Africa" loading="lazy" /><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">Team Grid Frame</div><div class="product-dims">80 × 30 cm · 2–4 cars</div><div class="product-desc">Showcases a full constructor team lineup side by side. Perfect for single-team collectors who want a clean, dedicated display.</div><div class="product-foot"><span class="product-price">From <strong>R1 699</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="driver-edition">
+        <div class="product-img"><img src="images/products/f1-drivers-speedchampions/premium.jpg" alt="Driver Edition Frame Premium — 55×25cm thick synthetic moulding LEGO Speed Champions driver display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Driver Edition</div><div class="product-name">Driver Edition Frame</div><div class="product-dims">55 × 25 cm · 1 car</div><div class="product-desc">Dedicated single-car frame with a driver panel inset below. A premium gift option with full livery and driver branding.</div><div class="product-foot"><span class="product-price">From <strong>R 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="mini-collectible">
+        <div class="product-img"><img src="images/products/f1-small-minilego/premium.png" alt="F1 Mini Collectible Frame Premium — 40×18cm thick synthetic moulding LEGO F1 Mini Series display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Mini Collectible</div><div class="product-name">F1 Mini Collectible Frame</div><div class="product-dims">40 × 18 cm · F1 Mini Series</div><div class="product-desc">Designed for LEGO F1 Mini Collectible Series figures. Slim-profile wall art for the new wave of mini motorsport builds.</div><div class="product-foot"><span class="product-price">From <strong>R899</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
     </div>
-    <div class="product-card reveal rd3">
-      <div class="product-img"><img src="images/prod-technic.jpg" alt="LEGO McLaren F1 Technic MCL-36 Wall Display Frame" loading="lazy" /><div class="product-badge">Featured</div></div>
-      <div class="product-info">
-        <div class="product-name">McLaren Technic Frame</div>
-        <div class="product-desc">Deep-profile portrait frame for the LEGO McLaren F1 MCL-36 Technic set. Every mechanical detail on full display.</div>
-        <div class="product-foot"><span class="product-series">Technic Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
-      </div>
+    <div class="range-shop-cta reveal">
+      <p class="range-cta-label">View the full Premium Range on our store</p>
+      <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-outline" style="border-color:var(--gold);color:var(--gold);">Shop Premium on Bobshop →</a>
     </div>
-    <div class="product-card reveal rd1">
-      <div class="product-img"><img src="images/prod-driver.jpg" alt="LEGO F1 Driver Edition Display Frame Verstappen Hamilton Norris" loading="lazy" /><div class="product-badge">Custom</div></div>
-      <div class="product-info">
-        <div class="product-name">Driver Edition Frames</div>
-        <div class="product-desc">Custom driver tribute frames featuring Speed Champions cars alongside bespoke driver backdrops — Verstappen, Hamilton, Norris, Russell and more.</div>
-        <div class="product-foot"><span class="product-series">Speed Champions Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
-      </div>
+  </div>
+</div>
+
+<!-- RANGE DIVIDER -->
+<div class="range-divider-block" aria-hidden="true">
+  <div class="range-divider-inner">
+    <span class="range-divider-line"></span>
+    <span class="range-divider-label">Also available in</span>
+    <span class="range-divider-line"></span>
+  </div>
+</div>
+
+<!-- CLASSIC RANGE -->
+<div id="range-classic" class="products-wrap-new range-classic-bg">
+  <div class="products-inner-new">
+    <div class="range-header reveal">
+      <div class="range-label-row"><span class="range-pip pip-classic"></span><p class="section-label" style="margin:0;color:var(--silver)">Classic Range</p></div>
+      <h2 class="section-title" style="margin-top:0.5rem">Sleek. Minimal.<br>Refined.</h2>
+      <p class="range-desc">A slimline aluminium frame that lets your build take centre stage. Clean lines, modern finish, timeless display — at an accessible price point.</p>
+      <ul class="range-pills pills-classic">
+        <li>Slimline aluminium frame</li><li>Minimal low-profile aesthetic</li><li>Lightweight precision mounting</li><li>Brushed silver finish</li>
+      </ul>
     </div>
-    <div class="product-card reveal rd2">
-      <div class="product-img"><img src="images/prod-brands.jpg" alt="LEGO F1 Full Grid Team Brands Display Frame South Africa" loading="lazy" /><div class="product-badge new">New</div></div>
-      <div class="product-info">
-        <div class="product-name">Full Grid — Team Brands</div>
-        <div class="product-desc">All teams on their own branded panels within a single frame — team logos, livery colours, and cars together.</div>
-        <div class="product-foot"><span class="product-series">Mini Collectibles Series</span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-sm">Shop →</a></div>
+    <div class="range-filter-row reveal rd1" data-grid="gridClassic" data-count="countClassic">
+      <button class="rfbtn rfbtn-classic active" data-filter="all">All</button>
+      <button class="rfbtn rfbtn-classic" data-filter="speed-champions">Speed Champions</button>
+      <button class="rfbtn rfbtn-classic" data-filter="technic">Technic</button>
+      <button class="rfbtn rfbtn-classic" data-filter="driver-edition">Driver Edition</button>
+      <button class="rfbtn rfbtn-classic" data-filter="mini-collectible">Mini Collectible</button>
+    </div>
+    <p class="range-count reveal rd2" id="countClassic">Showing <strong>6</strong> of <strong>6</strong> frames</p>
+    <div class="products-grid-new" id="gridClassic">
+
+      <div class="product-card reveal rd1" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-grid-frame-speedchampions/classic.JPG" alt="Full F1 Grid Frame Classic — 124×50cm slimline aluminium LEGO Speed Champions wall display South Africa" loading="lazy" /><div class="product-badge hot">★ Best Seller</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Speed Champions</div><div class="product-name">Full F1 Grid Frame</div><div class="product-dims">124 × 50 cm · 10+ cars</div><div class="product-desc">Our flagship frame in a slimline aluminium profile. All the display impact of the full grid — in a sleek, minimal footprint.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
       </div>
+
+      <div class="product-card reveal rd3" data-category="technic">
+        <div class="product-img"><img src="images/products/f1-lego-technic/classic.png"Technic Model Frame Classic — custom-sized slimline aluminium LEGO Technic wall display South Africa" loading="lazy" /><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">Technic Model Frame</div><div class="product-dims">Custom sized · Most Technic builds</div><div class="product-desc">Engineered for Technic builds in a refined aluminium frame. Precise, minimal, and built to hold complex models securely.</div><div class="product-foot"><span class="product-price">From <strong>R1 799</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>         
+
+      <div class="product-card reveal rd3" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-medium-speedchampions/classic.JPG" alt="Heritage Display Frame Classic — 90×35cm limited slimline aluminium LEGO Speed Champions display South Africa" loading="lazy" /><div class="product-badge" style="background:#7c3916;color:#fb923c;">Limited</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Speed Champions</div><div class="product-name">Heritage Display Frame</div><div class="product-dims">90 × 35 cm · 3–6 cars</div><div class="product-desc">The Heritage frame in aluminium — same curated display, same vintage character, in a slimline profile that suits any wall.</div><div class="product-foot"><span class="product-price">From <strong>R1 599</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div> 
+
+      <div class="product-card reveal rd2" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-team-brands-minilego/classic.png" alt="Team Grid Frame Classic — 80×30cm slimline aluminium LEGO Speed Champions team display South Africa" loading="lazy" /><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Speed Champions</div><div class="product-name">Team Grid Frame</div><div class="product-dims">80 × 30 cm · 2–4 cars</div><div class="product-desc">Your team lineup, presented cleanly on the wall. The aluminium profile keeps the focus on the cars, not the frame.</div><div class="product-foot"><span class="product-price">From <strong>R1 299</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="driver-edition">
+        <div class="product-img"><img src="images/products/f1-drivers-speedchampions/classic.JPG" alt="Driver Edition Frame Classic — 55×25cm slimline aluminium LEGO Speed Champions driver display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Driver Edition</div><div class="product-name">Driver Edition Frame</div><div class="product-dims">55 × 25 cm · 1 car</div><div class="product-desc">Single-car driver display in an aluminium slimline profile. A refined gift piece that fits any interior without overpowering it.</div><div class="product-foot"><span class="product-price">From <strong>R649</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="mini-collectible">
+        <div class="product-img"><img src="images/products/f1-small-minilego/classic.PNG" alt="F1 Mini Collectible Frame Classic — 40×18cm slimline aluminium LEGO F1 Mini Series display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Mini Collectible</div><div class="product-name">F1 Mini Collectible Frame</div><div class="product-dims">40 × 18 cm · F1 Mini Series</div><div class="product-desc">The Mini Collectible Series in a slimline aluminium frame. Clean, understated, and purpose-built for the new generation of builds.</div><div class="product-foot"><span class="product-price">From <strong>R649</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+
+
+    </div>
+    <div class="range-shop-cta reveal">
+      <p class="range-cta-label">View the full Classic Range on our store</p>
+      <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-outline" style="border-color:var(--silver);color:var(--silver);">Shop Classic on Bobshop →</a>
     </div>
   </div>
 </div>
