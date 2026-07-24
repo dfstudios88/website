@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- DF Studios Website | Version: 5.3 | Released: 2026-05-26 | Author: DF Studios -->
+<!-- DF Studios Website | Version: 5.4 | Released: 2026-07-18 | Author: DF Studios -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="version" content="5.3" />
+  <meta name="version" content="5.4" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
@@ -405,14 +405,19 @@
     .range-divider-line { flex: 1; height: 1px; background: var(--border); }
     .range-divider-label { font-family: var(--font-cond); font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
     .pf-hidden { display: none !important; }
+    .products-grid-new .product-card.wide { grid-column: span 3; }
+    .products-grid-new .product-card.wide .product-img { aspect-ratio: 21/7; }
     @media (max-width: 1000px) {
       .products-wrap-new { padding: 4rem 1.5rem; }
       .products-grid-new { grid-template-columns: 1fr 1fr; }
+      .products-grid-new .product-card.wide { grid-column: span 2; }
       .range-nav-inner { padding: 0 1.5rem; gap: 1.25rem; }
       .range-divider-block { padding: 0 1.5rem; }
     }
     @media (max-width: 580px) {
       .products-grid-new { grid-template-columns: 1fr; }
+      .products-grid-new .product-card.wide { grid-column: span 1; }
+      .products-grid-new .product-card.wide .product-img { aspect-ratio: 4/3; }
       .range-filter-row { gap: 0.3rem; }
       .rfbtn { font-size: 10px; padding: 0.35rem 0.8rem; }
     }
@@ -557,7 +562,7 @@
       <button class="rfbtn rfbtn-premium" data-filter="driver-edition">Driver Edition</button>
       <button class="rfbtn rfbtn-premium" data-filter="mini-collectible">Mini Collectible</button>
     </div>
-    <p class="range-count reveal rd2" id="countPremium">Showing <strong>6</strong> of <strong>6</strong> frames</p>
+    <p class="range-count reveal rd2" id="countPremium">Showing <strong>13</strong> of <strong>13</strong> frames</p>
     <div class="products-grid-new" id="gridPremium">
 
       <div class="product-card reveal rd1" data-category="speed-champions">
@@ -588,6 +593,41 @@
       <div class="product-card reveal rd2" data-category="mini-collectible">
         <div class="product-img"><img src="images/products/f1-small-minilego/premium.png" alt="F1 Mini Collectible Frame Premium — 40×18cm thick synthetic moulding LEGO F1 Mini Series display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
         <div class="product-info"><div class="product-cat">Mini Collectible</div><div class="product-name">F1 Mini Collectible Frame</div><div class="product-dims">40 × 18 cm · F1 Mini Series</div><div class="product-desc">Designed for LEGO F1 Mini Collectible Series figures. Slim-profile wall art for the new wave of mini motorsport builds.</div><div class="product-foot"><span class="product-price">From <strong>R899</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="technic">
+        <div class="product-img"><img src="images/products/batman-tumbler/premium.jpg" alt="DC Batman Batmobile Frame Premium — 80×50cm thick synthetic moulding LEGO Technic Batmobile display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">DC Batman™ Batmobile</div><div class="product-dims">80 × 50 cm · Compatible with 76240</div><div class="product-desc">Purpose-built for the Batman Batmobile Tumbler. Deep-set mounting handles the model's scale and weight, presenting it as a piece of gallery-worthy dark-knight engineering.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="technic">
+        <div class="product-img"><img src="images/products/bmw-m4-gt3/premium.jpg" alt="BMW M4 GT3 EVO Race Car Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">BMW M4 GT3 EVO Race Car</div><div class="product-dims">81 × 51 cm · Compatible with 42226</div><div class="product-desc">Engineered for the BMW M4 GT3 EVO. A commanding thick-moulding frame that puts the livery and engineering detail of the build front and centre.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd3" data-category="technic">
+        <div class="product-img"><img src="images/products/bugatti-chiron/premium.jpg" alt="Bugatti Chiron Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">Bugatti Chiron</div><div class="product-dims">81 × 51 cm · Compatible with 42083</div><div class="product-desc">A frame built to match the Chiron's engineering pedigree. Thick synthetic moulding gives the model the sculptural wall presence it deserves.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="technic">
+        <div class="product-img"><img src="images/products/lamborghini-sian/premium.jpg" alt="Lamborghini Sián Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">Lamborghini Sián</div><div class="product-dims">81 × 51 cm · Compatible with 42115</div><div class="product-desc">Purpose-sized for the Sián's dramatic silhouette. Deep-set mounting and a bold moulding profile make this hypercar the centrepiece of any wall.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="technic">
+        <div class="product-img"><img src="images/products/mclaren-p1/premium.jpg" alt="McLaren P1 Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">McLaren P1</div><div class="product-dims">81 × 51 cm · Compatible with 42172</div><div class="product-desc">A dedicated display frame for the McLaren P1. Thick synthetic moulding and precision mounting hardware built to handle the model's full scale.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd3" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-academy/premium.jpg" alt="F1 Academy Frame Premium — 25×25cm thick synthetic moulding LEGO Speed Champions display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">F1 Academy</div><div class="product-dims">25 × 25 cm · Compatible with 77258</div><div class="product-desc">A compact frame celebrating the F1 Academy series. Sized for a single build, finished with the same premium moulding as the rest of the collection.</div><div class="product-foot"><span class="product-price">From <strong>R799</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card wide reveal rd1" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/speed-champions-12-slot/premium.jpg" alt="12-Slot Speed Champions Frame Premium — 120×46cm thick synthetic moulding LEGO Speed Champions wall display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
+        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">12-Slot Speed Champions Frame</div><div class="product-dims">120 × 46 cm · 12 cars</div><div class="product-desc">Our widest Speed Champions frame yet — a horizontal display built to hold a full 12-car collection in one continuous, gallery-style row.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
     </div>
@@ -625,7 +665,7 @@
       <button class="rfbtn rfbtn-classic" data-filter="driver-edition">Driver Edition</button>
       <button class="rfbtn rfbtn-classic" data-filter="mini-collectible">Mini Collectible</button>
     </div>
-    <p class="range-count reveal rd2" id="countClassic">Showing <strong>6</strong> of <strong>6</strong> frames</p>
+    <p class="range-count reveal rd2" id="countClassic">Showing <strong>13</strong> of <strong>13</strong> frames</p>
     <div class="products-grid-new" id="gridClassic">
 
       <div class="product-card reveal rd1" data-category="speed-champions">
@@ -656,6 +696,41 @@
       <div class="product-card reveal rd2" data-category="mini-collectible">
         <div class="product-img"><img src="images/products/f1-small-minilego/classic.PNG" alt="F1 Mini Collectible Frame Classic — 40×18cm slimline aluminium LEGO F1 Mini Series display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
         <div class="product-info"><div class="product-cat" style="color:var(--silver)">Mini Collectible</div><div class="product-name">F1 Mini Collectible Frame</div><div class="product-dims">40 × 18 cm · F1 Mini Series</div><div class="product-desc">The Mini Collectible Series in a slimline aluminium frame. Clean, understated, and purpose-built for the new generation of builds.</div><div class="product-foot"><span class="product-price">From <strong>R649</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="technic">
+        <div class="product-img"><img src="images/products/batman-tumbler/classic.jpg" alt="DC Batman Batmobile Frame Classic — 80×50cm slimline aluminium LEGO Technic Batmobile display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">DC Batman™ Batmobile</div><div class="product-dims">80 × 50 cm · Compatible with 76240</div><div class="product-desc">The Batmobile Tumbler frame in a slimline aluminium profile. All the display impact, in a refined footprint that suits any wall.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="technic">
+        <div class="product-img"><img src="images/products/bmw-m4-gt3/classic.jpg" alt="BMW M4 GT3 EVO Race Car Frame Classic — 81×51cm slimline aluminium LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">BMW M4 GT3 EVO Race Car</div><div class="product-dims">81 × 51 cm · Compatible with 42226</div><div class="product-desc">A clean aluminium frame for the M4 GT3 EVO. Minimal lines keep the focus on the model's race livery and engineering.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd3" data-category="technic">
+        <div class="product-img"><img src="images/products/bugatti-chiron/classic.jpg" alt="Bugatti Chiron Frame Classic — 81×51cm slimline aluminium LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">Bugatti Chiron</div><div class="product-dims">81 × 51 cm · Compatible with 42083</div><div class="product-desc">The Chiron in a slimline aluminium frame. Understated, precise, and built to let the model's engineering detail speak for itself.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd1" data-category="technic">
+        <div class="product-img"><img src="images/products/lamborghini-sian/classic.jpg" alt="Lamborghini Sián Frame Classic — 81×51cm slimline aluminium LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">Lamborghini Sián</div><div class="product-dims">81 × 51 cm · Compatible with 42115</div><div class="product-desc">The Sián's dramatic lines in a refined aluminium profile. A lighter-footprint way to display the hypercar without losing impact.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd2" data-category="technic">
+        <div class="product-img"><img src="images/products/mclaren-p1/classic.jpg" alt="McLaren P1 Frame Classic — 81×51cm slimline aluminium LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Technic</div><div class="product-name">McLaren P1</div><div class="product-dims">81 × 51 cm · Compatible with 42172</div><div class="product-desc">The P1 in a slimline aluminium frame. Minimal, precise, and sized to hold the model securely without competing for attention.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card reveal rd3" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/f1-academy/classic.jpg" alt="F1 Academy Frame Classic — 25×25cm slimline aluminium LEGO Speed Champions display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Speed Champions</div><div class="product-name">F1 Academy</div><div class="product-dims">25 × 25 cm · Compatible with 77258</div><div class="product-desc">A compact aluminium frame for the F1 Academy series. Clean and understated — a great entry piece or gift.</div><div class="product-foot"><span class="product-price">From <strong>R499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
+      </div>
+
+      <div class="product-card wide reveal rd1" data-category="speed-champions">
+        <div class="product-img"><img src="images/products/speed-champions-12-slot/classic.jpg" alt="12-Slot Speed Champions Frame Classic — 120×46cm slimline aluminium LEGO Speed Champions wall display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-classic">Classic</div></div>
+        <div class="product-info"><div class="product-cat" style="color:var(--silver)">Speed Champions</div><div class="product-name">12-Slot Speed Champions Frame</div><div class="product-dims">120 × 46 cm · 12 cars</div><div class="product-desc">The full 12-car horizontal display in a slimline aluminium profile — a wide, gallery-style row built to scale to any wall.</div><div class="product-foot"><span class="product-price">From <strong>R2 499</strong></span><a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-classic">Shop →</a></div></div>
       </div>
 
 
@@ -891,6 +966,26 @@
     navOpen = !navOpen;
     const nl = document.querySelector('.nav-links');
     Object.assign(nl.style, navOpen ? { display:'flex', flexDirection:'column', position:'fixed', top:'62px', left:'0', right:'0', background:'rgba(11,22,40,0.97)', padding:'2rem 1.5rem', gap:'1.5rem', borderBottom:'1px solid #1f3158', backdropFilter:'blur(14px)', zIndex:'100' } : { display:'none' });
+  });
+  document.querySelectorAll('.range-filter-row').forEach(row => {
+    const grid = document.getElementById(row.dataset.grid);
+    const countEl = document.getElementById(row.dataset.count);
+    const cards = grid ? Array.from(grid.querySelectorAll('.product-card')) : [];
+    const total = cards.length;
+    row.querySelectorAll('.rfbtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        row.querySelectorAll('.rfbtn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        let shown = 0;
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('pf-hidden', !match);
+          if (match) shown++;
+        });
+        if (countEl) countEl.innerHTML = `Showing <strong>${shown}</strong> of <strong>${total}</strong> frames`;
+      });
+    });
   });
   function submitForm(btn) {
     const panel = btn.closest('.contact-panel');
