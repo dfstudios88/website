@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<!-- DF Studios Website | Version: 5.6 | Released: 2026-09-15 | Author: DF Studios | v5.6: Take App store integration — primary Shop Now CTA, category-mapped product links, Bobshop retained as secondary -->
+<!-- DF Studios Website | Version: 5.8 | Released: 2026-09-16 | Author: DF Studios | v5.8: Added Google Tag Manager (GTM-NFBZGNGP) — script in head, noscript iframe after body open -->
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NFBZGNGP');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -21,7 +29,7 @@
   <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8" />
-  <meta name="version" content="5.6" />
+  <meta name="version" content="5.8" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
@@ -54,13 +62,15 @@
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="gtq_NXyi8G9eI-ZwDvy235cKTtlJQ_ixh9Yyu1IUI" />
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NFBZGNGP');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5G3JM7CDQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-B5G3JM7CDQ');
+  </script>
 
   <!-- Sitemap reference -->
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -91,7 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     "sameAs": [
       "https://take.app/dfstudios",
-      "https://www.tiktok.com/@df.studios1",
+      "https://www.instagram.com/df_studios_sa",
+      "https://www.facebook.com/profile.php?id=61574503450712",
       "https://www.bobshop.co.za/seller/5568260/DF_Studios"
     ],
     "aggregateRating": {
@@ -272,7 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* CONTACT */
     #contact-wrap { padding: 7rem 3.5rem; border-top: 1px solid var(--border); }
-    #contact { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    #contact { max-width: 640px; margin: 0 auto; display: block; }
     .contact-details { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.8rem; }
     .ci { border-left: 2px solid var(--border); padding-left: 1.5rem; transition: border-color 0.3s; }
     .ci:hover { border-color: var(--orange); }
@@ -280,17 +291,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .ci-val { font-size: 0.95rem; color: var(--white); }
     .ci-val a { color: var(--white); text-decoration: none; transition: color 0.2s; }
     .ci-val a:hover { color: var(--orange); }
-    .contact-panel { background: var(--navy2); border: 1px solid var(--border); padding: 2.5rem; }
-    .cp-title { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.05em; color: var(--white); margin-bottom: 2rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .fg { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-    .fg label { font-family: var(--font-cond); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
-    .fg input, .fg textarea, .fg select { background: var(--navy); border: 1px solid var(--border); color: var(--white); padding: 0.75rem 1rem; font-family: var(--font-body); font-size: 13px; outline: none; transition: border-color 0.2s; width: 100%; resize: none; }
-    .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--orange); }
-    .fg textarea { min-height: 108px; }
-    .fg select option { background: var(--navy); }
-    .btn-submit { width: 100%; background: var(--orange); color: var(--white); border: none; padding: 1rem; font-family: var(--font-cond); font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.2s; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); margin-top: 0.5rem; }
-    .btn-submit:hover { background: var(--orange2); transform: translateY(-2px); }
 
     /* FOOTER */
     footer { background: var(--navy2); border-top: 1px solid var(--border); padding: 2.5rem 3.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
@@ -324,14 +324,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .why-grid { grid-template-columns: 1fr 1fr; }
       #why-wrap { padding: 4rem 1.5rem; }
       #shop-wrap { padding: 4rem 1.5rem; }
-      #contact { grid-template-columns: 1fr; gap: 3rem; }
       #contact-wrap { padding: 4rem 1.5rem; }
       footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
       .footer-mid { text-align: left; }
     }
     @media (max-width: 580px) {
       .why-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
       .hstat { flex: 0 0 50%; }
     }
 
@@ -445,6 +443,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFBZGNGP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <nav id="navbar">
   <a href="#" class="nav-logo">DF<span class="dot">.</span>Studios<span class="nav-logo-sub">LEGO Display Frames</span></a>
   <ul class="nav-links">
@@ -470,7 +469,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-actions">
         <a href="https://take.app/dfstudios" target="_blank" class="btn-primary">Shop the Store</a>
         <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="btn-outline">Also on Bobshop</a>
-        <a href="#products-wrap" class="btn-outline">View All Frames ↓</a>
       </div>
     </div>
     <div class="hero-callout">
@@ -582,7 +580,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="rfbtn rfbtn-premium" data-filter="driver-edition">Driver Edition</button>
       <button class="rfbtn rfbtn-premium" data-filter="mini-collectible">Mini Collectible</button>
     </div>
-    <p class="range-count reveal rd2" id="countPremium">Showing <strong>13</strong> of <strong>13</strong> frames</p>
+    <p class="range-count reveal rd2" id="countPremium">Showing <strong>8</strong> of <strong>8</strong> frames</p>
     <div class="products-grid-new" id="gridPremium">
 
       <div class="product-card reveal rd1" data-category="speed-champions">
@@ -622,22 +620,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="product-card reveal rd2" data-category="technic">
         <div class="product-img"><img src="images/products/bmw-m4-gt3/premium.jpg" alt="BMW M4 GT3 EVO Race Car Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
-        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">BMW M4 GT3 EVO Race Car</div><div class="product-dims">81 × 51 cm · Compatible with 42226</div><div class="product-desc">Engineered for the BMW M4 GT3 EVO. A commanding thick-moulding frame that puts the livery and engineering detail of the build front and centre.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://take.app/dfstudios/c/cmt390i6h00000akn5in5hayw" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
       <div class="product-card reveal rd3" data-category="technic">
         <div class="product-img"><img src="images/products/bugatti-chiron/premium.jpg" alt="Bugatti Chiron Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
-        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">Bugatti Chiron</div><div class="product-dims">81 × 51 cm · Compatible with 42083</div><div class="product-desc">A frame built to match the Chiron's engineering pedigree. Thick synthetic moulding gives the model the sculptural wall presence it deserves.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://take.app/dfstudios/c/cmt390i6h00000akn5in5hayw" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
       <div class="product-card reveal rd1" data-category="technic">
         <div class="product-img"><img src="images/products/lamborghini-sian/premium.jpg" alt="Lamborghini Sián Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
-        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">Lamborghini Sián</div><div class="product-dims">81 × 51 cm · Compatible with 42115</div><div class="product-desc">Purpose-sized for the Sián's dramatic silhouette. Deep-set mounting and a bold moulding profile make this hypercar the centrepiece of any wall.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://take.app/dfstudios/c/cmt390i6h00000akn5in5hayw" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
       <div class="product-card reveal rd2" data-category="technic">
         <div class="product-img"><img src="images/products/mclaren-p1/premium.jpg" alt="McLaren P1 Frame Premium — 81×51cm thick synthetic moulding LEGO Technic display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
-        <div class="product-info"><div class="product-cat">Technic</div><div class="product-name">McLaren P1</div><div class="product-dims">81 × 51 cm · Compatible with 42172</div><div class="product-desc">A dedicated display frame for the McLaren P1. Thick synthetic moulding and precision mounting hardware built to handle the model's full scale.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://take.app/dfstudios/c/cmt390i6h00000akn5in5hayw" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
       <div class="product-card reveal rd3" data-category="speed-champions">
@@ -647,7 +641,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="product-card wide reveal rd1" data-category="speed-champions">
         <div class="product-img"><img src="images/products/speed-champions-12-slot/premium.jpg" alt="12-Slot Speed Champions Frame Premium — 120×46cm thick synthetic moulding LEGO Speed Champions wall display South Africa" loading="lazy" /><div class="product-badge new">New</div><div class="range-tag tag-premium">Premium</div></div>
-        <div class="product-info"><div class="product-cat">Speed Champions</div><div class="product-name">12-Slot Speed Champions Frame</div><div class="product-dims">120 × 46 cm · 12 cars</div><div class="product-desc">Our widest Speed Champions frame yet — a horizontal display built to hold a full 12-car collection in one continuous, gallery-style row.</div><div class="product-foot"><span class="product-price">From <strong>R2 999</strong></span><a href="https://take.app/dfstudios/c/cmt38yyrc000009ks4s0ik207" target="_blank" rel="noopener noreferrer" class="btn-sm btn-sm-premium">Shop →</a></div></div>
       </div>
 
     </div>
@@ -800,10 +793,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </svg>
         <span style="font-size:9px;letter-spacing:0.12em;text-transform:uppercase;font-family:var(--font-cond);font-weight:700;">.co.za</span>
       </a>
-      <a href="mailto:dfstudios88@gmail.com" class="btn-shop">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        Custom Enquiry
-      </a>
     </div>
   </div>
 </div>
@@ -937,24 +926,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="contact-wrap">
   <div id="contact">
     <div>
-      <div class="reveal"><p class="section-label">Get in Touch</p><h2 class="section-title">Let's Talk<br>Frames.</h2><p style="font-size:0.95rem;color:var(--silver);margin-top:1.2rem;max-width:340px;line-height:1.7;">Questions about sizing, custom designs, or bulk orders? We'd love to hear from you.</p></div>
+      <div class="reveal"><p class="section-label">Get in Touch</p><h2 class="section-title">Let's Talk<br>Frames.</h2><p style="font-size:0.95rem;color:var(--silver);margin-top:1.2rem;max-width:340px;line-height:1.7;">Questions about sizing, custom designs, or bulk orders? We'd love to hear from you.</p><p style="font-size:0.95rem;color:var(--silver);margin-top:0.8rem;max-width:340px;line-height:1.7;">Have a custom request? Email us on <a href="mailto:dfstudios88@gmail.com" style="color:var(--orange);">dfstudios88@gmail.com</a>.</p></div>
       <div class="contact-details reveal rd1">
         <div class="ci"><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:dfstudios88@gmail.com">dfstudios88@gmail.com</a></div></div>
         <div class="ci"><div class="ci-label">Location</div><div class="ci-val">Sheffield Beach, KwaZulu-Natal<br>South Africa</div></div>
-        <div class="ci"><div class="ci-label">TikTok</div><div class="ci-val"><a href="https://www.tiktok.com/@df.studios1" target="_blank">@df.studios1</a></div></div>
+        <div class="ci"><div class="ci-label">Instagram</div><div class="ci-val"><a href="https://www.instagram.com/df_studios_sa" target="_blank">@df_studios_sa</a></div></div>
+        <div class="ci"><div class="ci-label">Facebook</div><div class="ci-val"><a href="https://www.facebook.com/profile.php?id=61574503450712" target="_blank">DF Studios</a></div></div>
         <div class="ci"><div class="ci-label">Online Store</div><div class="ci-val"><a href="https://take.app/dfstudios" target="_blank">Shop DF Studios</a></div></div>
       </div>
-    </div>
-    <div class="contact-panel reveal rd2">
-      <div class="cp-title">Send a Message</div>
-      <div class="form-row">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="John" /></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith" /></div>
-      </div>
-      <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" /></div>
-      <div class="fg"><label>Enquiry Type</label><select><option value="">Select...</option><option>Product Information</option><option>Custom / Sizing Enquiry</option><option>Order Status</option><option>Bulk / Trade Order</option><option>Other</option></select></div>
-      <div class="fg"><label>Message</label><textarea placeholder="Tell us about your build or what you're looking for..."></textarea></div>
-      <button class="btn-submit" onclick="submitForm(this)">Send Message →</button>
     </div>
   </div>
 </div>
@@ -972,7 +951,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-social">
     <a href="https://take.app/dfstudios" target="_blank" class="social-link">Shop</a>
-    <a href="https://www.tiktok.com/@df.studios1" target="_blank" class="social-link">TikTok</a>
+    <a href="https://www.instagram.com/df_studios_sa" target="_blank" class="social-link" style="display:inline-flex;align-items:center;gap:0.4rem;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61574503450712" target="_blank" class="social-link">Facebook</a>
     <a href="https://www.bobshop.co.za/seller/5568260/DF_Studios" target="_blank" class="social-link">Bobshop</a>
     <a href="https://www.amazon.co.za/s?me=A1KZ6SR39LV2US&marketplaceID=AE08WJ6YKNBMC" target="_blank" class="social-link">Amazon</a>
     <a href="mailto:dfstudios88@gmail.com" class="social-link">Email</a>
@@ -1012,15 +995,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
   });
-  function submitForm(btn) {
-    const panel = btn.closest('.contact-panel');
-    const first = panel.querySelector('input[type="text"]').value.trim();
-    if (!first) { panel.querySelector('input[type="text"]').focus(); return; }
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#1a6e38';
-    btn.disabled = true;
-    panel.querySelectorAll('input, textarea, select').forEach(el => el.disabled = true);
-  }
 </script>
 </body>
 </html>
